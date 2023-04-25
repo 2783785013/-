@@ -1,0 +1,7 @@
+# spider：
+    百度搜索 ： title_baidu
+    360搜索 :   title_360
+    搜狗搜索 ： title_sougou
+
+# 启动
+    run.py
