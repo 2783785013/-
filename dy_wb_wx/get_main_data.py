@@ -72,8 +72,8 @@ def get_data_num(sec_uid):
     params['X-Bogus'] = get_X_bogus(urlencode(params))
     response = requests.get(url, headers=headers, params=params)
     response.encoding = response.apparent_encoding
-    # print(8888888888888,response.status_code)
-    # print(response.text)
+    print(8888888888888,response.status_code)
+    print(response.text)
     if response.status_code == 200:
         data = json.loads(response.text)
         # print(111111,data)
@@ -93,5 +93,6 @@ if __name__ == '__main__':
     # https://www.douyin.com/user/MS4wLjABAAAA5nuPKDI-mpTVaqdQhyNgRWXE5ie_rHi5MgNbcoCMKjY
     # sec_uid = "MS4wLjABAAAA5nuPKDI-mpTVaqdQhyNgRWXE5ie_rHi5MgNbcoCMKjY"
     # sec_uid = "MS4wLjABAAAAvL6ZWvqSso-yX-Nxye-afhd4BZA57uWF-qdPwbc2OkU"
-    sec_uid = "MS4wLjABAAAAWWDKr-TwKhM6Cb02cd6PpkE0xZEl4Haua2dVZrLb1Vg"
-    get_data_num(sec_uid)
+    for i in range(2):
+        sec_uid = "MS4wLjABAAAAWWDKr-TwKhM6Cb02cd6PpkE0xZEl4Haua2dVZrLb1Vg"
+        get_data_num(sec_uid)
